@@ -49,7 +49,9 @@ Enable the following API in your GCP project:
   'Files'!A2:B
   ```
 
-Sheets layout [sreenshot]
+Sheets layout
+
+![image](https://github.com/user-attachments/assets/6cf1e46a-18cd-4093-98ed-c8c2b7204502)
 
 ## Usage
 1. Attach the Apps Script to a Google Sheets document.
