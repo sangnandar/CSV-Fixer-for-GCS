@@ -3,7 +3,7 @@
 ## Overview
 This project is a **Google Apps Script solution** designed to read, validate, and fix CSV files stored in **Google Cloud Storage (GCS)**.
 
-This project extends the functionality of [Load CSVs from GCS to BigQuery](https://github.com/sangnandar/Load-CSVs-from-GCS-to-BQ). When errors are detected, CSV files cannot be loaded into BigQuery. This project addresses those errors, uploads the corrected files back to GCS, and prepares them for processing by "Load CSVs from GCS to BigQuery".
+This project extends the functionality of [Load CSVs from GCS to BigQuery](https://github.com/sangnandar/Load-CSVs-from-GCS-to-BigQuery). When errors are detected, CSV files cannot be loaded into BigQuery. This project addresses those errors, uploads the corrected files back to GCS, and prepares them for processing by "Load CSVs from GCS to BigQuery".
 
 ### Features
 - **Error Detection:** Reads CSV files from GCS, identifies records with errors, and creates a new Google Sheet for each file, listing the issues found.
@@ -60,4 +60,4 @@ Sheets layout
    - **Custom Menu -> Fix file:** uploads the corrected file back to GCS.
 
 # Related project
-- [Load CSVs from GCS to BigQuery](https://github.com/sangnandar/Load-CSVs-from-GCS-to-BQ) - Clean load CSV files from GCS to BigQuery.
+- [Load CSVs from GCS to BigQuery](https://github.com/sangnandar/Load-CSVs-from-GCS-to-BigQuery) - Clean load CSV files from GCS to BigQuery.
