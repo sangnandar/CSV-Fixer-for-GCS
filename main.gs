@@ -54,17 +54,16 @@ function ETLTest()
       /**
        * This is the part where we rigorously test the record
        */
-      if (row.length === 9) {
-        // check if Col-1 is a valid date format & value
-        if (!isValidDate(row[0])) errors.push('Col-1; wrong date format/value');
-        // check if Col-2 is a valid date format & value
-        if (!isValidDate(row[1])) errors.push('Col-2; wrong date format/value');
-        // check if Col-5 can be casted to integer
-        if (isNaN(parseInt(row[4].replace(',', '')))) errors.push('Col-5; is not an integer');
+      if (row.length !== 9) {
+        // length test is the major test, if it fails we don't need to test the rest
+        errors.push('Number of columns doesn\'t match');
 
       } else {
-        // length test is the major test, if it fails we don't need to test the rest
-        if (row.length !== 9) errors.push('Number of columns doesn\'t match');
+        // check for Col-1 and Col-2; valid date format & value
+        if (!isValidDate(row[0])) errors.push('Col-1; wrong date format/value');
+        if (!isValidDate(row[1])) errors.push('Col-2; wrong date format/value');
+        // check for Col-5; can be casted to integer
+        if (isNaN(parseInt(row[4].replace(',', '')))) errors.push('Col-5; is not an integer');
 
       }
       /**
